@@ -1,0 +1,20 @@
+1，使用python -m pip install --upgrade pip升级失败
+2，使用python -m pip install -U --force-reinstall pip依然失败
+3，使用pip install --user --upgrade pip成功升级
+
+
+{
+  "name": "meetwebpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {     //这个脚本的作用就是将一些命令隐射成npm run ...     ,比如 npm run test    ,当执行npm run test命令时,就会执行echo \"Error: no test specified\" && exit 1
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bulid":"webpack"        //就是将webpack命令隐射成 npm run bulid
+  },
+  "author": "",
+  "license": "ISC"             //如果项目开源,就需要这个值  --> "license": "ISC",不开源就不要这个值 -->"license": ""
+}
+//当项目中需要用到node时,都需要用到这个文件
+//在终端里输入  npm init   就可以了!就会自动生成package.json文件
+//如果package.json还需要依赖其他文件就执行 npm install
